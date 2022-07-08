@@ -28,19 +28,18 @@ pubspec.yaml: This file is used to manage the dependencies of the app. By depend
 - We will be using Darpad to learn dart programming language
 
 ### sample dart snippet
-'''
-void main() {
+```void main() {
   for (int i = 0; i < 5; i++) {
     print('hello ${i + 1}');
   }
 }
-'''
+```
 - main is the name of the function. Main is special function and as you create a dart file and run that then main function runs first. 
 - Dart is a typed programming language, hence we need to define the type of the program, void is the type of function since this function returns nothing
 - () This is a place where function collects arguments. arguments are the conditionals that gets passed to the function
 
 Camelcase convention: The first letter will be small. If the name is composed of multiple letters then the next word will be capitalized eg. addNumbers. This convention is used in naming functions in dart
-'''
+```
 addNumbers(a, b){
  print(a+b);
 }
@@ -49,14 +48,14 @@ void main() {
   addNumbers(1,3);
   print('hello world!');
   }
-'''
+```
 - dart uses ; at the end of each expression. Dart uses ; inside the {}. 
 - dart is a stongly types language ie. we need to specify the type of the objects. If the type of object is not defined then dart automatically assume a dynamic type, which does not tell about the errors and issues with the program
 - in the above code snippet, if we just write a+b in the line 44, then it will not print anything. To show a result we have to add a print statement
 - print is a built in function similar to python
 - the function which is defined above main, needs to be mentioned in the main function with arguments otherwise the addNumbers function will not be executed
 - a function is a void function if it does not returns anything(it is very similar to python). If the function returns something then we need to specify what field it needs to return. for eg:
-'''
+```
 double addNumbers(double a,double b){
  return a + b;
 }
@@ -66,7 +65,7 @@ void main() {
   print(addNumbers(3.9,6));
   print('hello world!');
   }
-'''
+```
 - in this code snippet, we have specified the outcome of addNumbers as a double, thus this return a double 
 - to comment out anything use //
 - Data Types in Dart
@@ -89,7 +88,7 @@ or
 Data inference
 - Dart has something called data inference which means that dart can infer the type of variable by looking the result if a result of a function is stored in that variable. But however it is suggested to explicitely specify the type of the variable.
 
-'''
+```
 double addNumbers(double a,double b){
   // print(a+b);
   return a + b;
@@ -103,7 +102,7 @@ void main() {
   
   print(addResult +3.3);
   }
-'''
+```
 
 String
 1. String is define as using "String" as a key word
@@ -112,12 +111,13 @@ String
 
 - Dart is a object oriented language and the syntax is quite similar to python.
 
-'''
+```
 
 class Person{
   String name="Max";//this is to add a default value to the variable
   int age=30;
 }
+
 
 
 double addNumbers(double a,double b){
@@ -143,20 +143,20 @@ void main() {
   }
 
 
-'''
+```
 
 The result of this is:
 
-'''
+```
 30
 50
 Max
 Instance of 'Person'
 
-'''
+```
 - Another example of a class function (A bit more complicated by understandable function)
 
-'''
+```
 class Rectangle{
   var width;
   var height;
@@ -175,4 +175,4 @@ void main(){
   r1.area();
   
 }
-'''
+```
