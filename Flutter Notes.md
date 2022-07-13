@@ -176,3 +176,111 @@ void main(){
   
 }
 ```
+## Class Constructors and Named Arguments 
+
+- Constructors are functions/methods that are called only once when a class is run and an instance is created for the class. They are used to initialize a class. For eg. in the Rectangle class, whenever we want to create an instance, if we want to add width and breadth, we will create a constructor. There are two methods through which constructors can be created.
+    - Method 1: 
+    ```
+    class Rectangle{
+  var width;
+  var height;
+  
+  Rectangle({int inputwidth=1, int inputheight=1 }){
+    width=inputwidth;
+    height=inputheight;
+  }
+  void area(){
+    var area= width * height;
+    print('The Area of the rectangle is: ' + area.toString());
+  }
+  
+  void perimeter(){
+    var perimeter=2*(width+height);
+    print("The perimeter of Rectangle is :" + perimeter.toString());
+      
+  }
+}
+void main(){
+  var r1=Rectangle(inputwidth: 2,inputheight: 3);
+  print(r1.height);
+  print(r1.width);
+  r1.area();
+  r1.perimeter();
+  
+}
+    
+    ```
+    In this case the initialization can be accomplished by adding the class name itself and calling two variables representing height and width. These variables/properties are then equated with classes variables. We can also mention default responses by this.
+    - Method 2:
+    ```
+    class Rectangle{
+  var width;
+  var height;
+  
+  Rectangle({int width=1, int height=1 }){
+    this.width=width;
+    this.height=height;
+  }
+  void area(){
+    var area= width * height;
+    print('The Area of the rectangle is: ' + area.toString());
+  }
+  
+  void perimeter(){
+    var perimeter=2*(width+height);
+    print("The perimeter of Rectangle is :" + perimeter.toString());
+      
+  }
+}
+void main(){
+  var r1=Rectangle(width: 2,height: 3);
+  print(r1.height);
+  print(r1.width);
+  r1.area();
+  r1.perimeter();
+  
+}
+    ```
+    In the second method there is no need to create another variable. Instead we can add "this." keyword to equate the two arguments.
+    We can instantiate the new instance by providing values using :
+    
+    We can also use a variation of the above method.
+    
+    ```
+    class Rectangle{
+  var width;
+  var height;
+  
+  Rectangle({int this.width=1, int this.height=1 });
+  void area(){
+    var area= width * height;
+    print('The Area of the rectangle is: ' + area.toString());
+  }
+  
+  void perimeter(){
+    var perimeter=2*(width+height);
+    print("The perimeter of Rectangle is :" + perimeter.toString());
+      
+  }
+}
+void main(){
+  var r1=Rectangle(width: 2,height: 3);
+  print(r1.height);
+  print(r1.width);
+  r1.area();
+  r1.perimeter();
+  
+}
+    ```
+    
+    > if an argument is a required argument for creating an instant. We can use @required method.
+    ```
+     Rectangle({@required  width=1, @required  height=1 }){
+    this.width=width;
+    this.height=height;
+  }
+    
+    ```
+### Named Arguments
+
+- The arguments which can be referenced using name like we have defined in the earlier example. We can have positional arguments which are referenced using positions but defining the class becomes hard as one needs to remember the position which intializing a class.
