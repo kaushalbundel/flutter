@@ -64,10 +64,11 @@ class MyApp extends StatelessWidget {
 ```void main() {
 runApp(MyApp());
 
-}```
+}
+```
 
 ```
 void main()=>runApp(MyApp());
 
 ```
-- This nomenclature works when there is a function with only one expression. 
+This nomenclature works when there is a function with only one expression. 
