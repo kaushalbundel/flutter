@@ -25,7 +25,7 @@ pubspec.yaml: This file is used to manage the dependencies of the app. By depend
 
 # Understanding Dart Programming Language
 
-- We will be using Darpad to learn dart programming language
+- We will be using [Darpad](www.dartpad.dev) Darpad to learn dart programming language
 
 ### sample dart snippet
 ```void main() {
@@ -34,9 +34,9 @@ pubspec.yaml: This file is used to manage the dependencies of the app. By depend
   }
 }
 ```
-- main is the name of the function. Main is special function and as you create a dart file and run that then main function runs first. 
+- main is the name of the function. Main is special function and as you create a dart file and run that then main function runs first.All the functions that you define in a program should be mentioned in the main function for them to run smoothly. 
 - Dart is a typed programming language, hence we need to define the type of the program, void is the type of function since this function returns nothing
-- () This is a place where function collects arguments. arguments are the conditionals that gets passed to the function
+- () This is a place where function collects arguments. Arguments are the conditionals that gets passed to the function. Python Reference: These are same as python parameters. Parameters and Arguments in python are used in a similar manner.
 
 Camelcase convention: The first letter will be small. If the name is composed of multiple letters then the next word will be capitalized eg. addNumbers. This convention is used in naming functions in dart
 ```
@@ -50,11 +50,11 @@ void main() {
   }
 ```
 - dart uses ; at the end of each expression. Dart uses ; inside the {}. 
-- dart is a stongly types language ie. we need to specify the type of the objects. If the type of object is not defined then dart automatically assume a dynamic type, which does not tell about the errors and issues with the program
+- dart is a strongly types language ie. We need to specify the type of the objects. If the type of object is not defined then dart automatically assume a dynamic type, which does not tell about the errors and issues with the program. 
 - in the above code snippet, if we just write a+b in the line 44, then it will not print anything. To show a result we have to add a print statement
 - print is a built in function similar to python
 - the function which is defined above main, needs to be mentioned in the main function with arguments otherwise the addNumbers function will not be executed
-- a function is a void function if it does not returns anything(it is very similar to python). If the function returns something then we need to specify what field it needs to return. for eg:
+- a function is a void function if it does not returns anything. If the function returns something then we need to specify what field it needs to return. For eg:
 ```
 double addNumbers(double a,double b){
  return a + b;
@@ -77,16 +77,16 @@ void main() {
 ## Dart Basics- Day 2
 Variable
 
-1. A varible in dart is determine by the keyword var, though we can also specify the type of variable like we specify for arguments in a function like int a, double b etc. So either a variable can be specified as: 
+1. A variable in dart is determine by the keyword var, though we can also specify the type of variable like we specify for arguments in a function like int a, double b etc. So either a variable can be specified as: 
 - var firstVariable
 or 
 - double firstVariable
-- But as per the naming convention, we should specify var to declare a variable 
+- But as per the convention, we should specify var to declare a variable 
 
-2. The naming convention is same as that of a function ie. camel case with first word is a small letter
+2. The naming convention is same as that of a function ie. camel case with first word is a small letter (this is also called as a lower camel case convention)
 
 Data inference
-- Dart has something called data inference which means that dart can infer the type of variable by looking the result if a result of a function is stored in that variable. But however it is suggested to explicitely specify the type of the variable.
+- Dart has something called data inference which means that dart can infer the type of variable by looking the result if a result of a function is stored in that variable. But however it is suggested to explicitly specify the type of the variable.
 
 ```
 double addNumbers(double a,double b){
@@ -103,9 +103,9 @@ void main() {
   print(addResult +3.3);
   }
 ```
-
+- Since in dart we specify the type of variable, we can not add a float and an int number. If we try to do so dart will throw an error.
 String
-1. String is define as using "String" as a key word
+1. String is define as using "String" as a key word. Observe "S" is capital here.
 
 ## Dart as a object oriented language
 
@@ -176,10 +176,11 @@ void main(){
   
 }
 ```
+- Here we have created a Rectangle class with arguments width and height.We have defined an area function that does not returns anything but prints the statement which specifies area. We call the function in the mail function, where we first create an instance of the class.The instance variable is also defined. Then we assign the values of width and height and finally print the height, width and area by calling the method related to the function.
 ## Class Constructors and Named Arguments 
 
 - Constructors are functions/methods that are called only once when a class is run and an instance is created for the class. They are used to initialize a class. For eg. in the Rectangle class, whenever we want to create an instance, if we want to add width and breadth, we will create a constructor. There are two methods through which constructors can be created.
-    - Method 1: 
+    - Method 1: Observe that in this method the class is called inside the class and we create another set of arguments. We equate the arguments created in the new class with the old class, so that the arguments can be declared while creating class instance. 
         ```
         class Rectangle{
       var width;
@@ -208,11 +209,11 @@ void main(){
       r1.perimeter();
 
     }
-
-        ```
+      ```
         In this case the initialization can be accomplished by adding the class name itself and calling two variables representing height and width. These variables/properties are then equated with classes variables. We can also mention default responses by this.
     - Method 2:
-        ```
+        
+      ```
         class Rectangle{
       var width;
       var height;
@@ -240,6 +241,7 @@ void main(){
       r1.perimeter();
 
     }
+
     ```
     In the second method there is no need to create another variable. Instead we can add "this." keyword to equate the two arguments.
     We can instantiate the new instance by providing values using :
